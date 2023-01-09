@@ -23,11 +23,8 @@ public class GroceryRepositoryTest {
      */
     @Test
     public void groceryListEmptyOnStartTest(){
-        
         List<String> expectedOutput = new ArrayList<>();
-
         List<String> allGroceries = groceryDAO.getAllGroceries();
-
         Assert.assertEquals(expectedOutput, allGroceries);
         
     }
@@ -38,11 +35,8 @@ public class GroceryRepositoryTest {
     public void groceryListAddTest1(){
         List<String> expectedOutput = new ArrayList<>();
         expectedOutput.add("apples");
-        
         groceryDAO.addGrocery("apples");
-
         List<String> actualOutput = groceryDAO.getAllGroceries();
-
         Assert.assertEquals(expectedOutput, actualOutput);
 
     }
